@@ -21,7 +21,6 @@ struct RunningWorkout {                                         // Бегова�
 
 let info: RunningWorkout = .init(distance: 1600, time: 4800, elevation: 16)
 info.averageMileTime
-
 /*:
  В других упражнениях для приложения, вы ободряли пользователей сообщениями на основе того, как много шагов они прошли. Удобное место для проверки необходимости вывода такой информации — это наблюдатели свойств.
  
@@ -32,7 +31,7 @@ struct Steps {
     var goal: Int
     
     var steps: Int {
-        willSet(newValue) {
+        willSet {
             (newValue > steps) ? print("Congratulations! Your have new personal record!") : print("You have no changes!")
         }
     }

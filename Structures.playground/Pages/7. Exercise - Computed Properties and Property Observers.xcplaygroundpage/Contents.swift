@@ -24,14 +24,14 @@ print(figure.area)
 struct Height {
     
     var heightInInches: Double {
-        didSet(oldHeightInInches) {
-            (oldHeightInInches != heightInInches) ? (heightInInches) : (heightInCentimeters / 2.54)
+        didSet {
+            (oldValue != heightInInches) ? (heightInInches) : (heightInCentimeters / 2.54)
         }
     }
     
     var heightInCentimeters: Double {
-            didSet(oldHeightInCentimeters) {
-                (oldHeightInCentimeters != heightInCentimeters) ? (heightInCentimeters) : (heightInInches * 2.54)
+            didSet {
+                (oldValue != heightInCentimeters) ? (heightInCentimeters) : (heightInInches * 2.54)
             }
         }
         
