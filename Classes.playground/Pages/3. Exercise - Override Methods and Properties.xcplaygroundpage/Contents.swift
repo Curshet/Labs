@@ -58,8 +58,6 @@ defender.moveRight()
 print(defender.position)
 defender.fire()
 print(defender.remainingFirePower) */
-
-    
 /*:
  Вернитесь к определению `ShieldedShip` и переопределите метод `wasHit()`.  В теле метода проверьте, не достигло ли `shieldStrength` значения 0.  Если оно больше 0, уменьшите `shieldStrength` на 5.  В противном случае, уменьшите `health` на 5.  Вызовите `wasHit()` для `defender` и выведите в консоль значения `shieldStrength` и `health`.
  */
@@ -78,8 +76,6 @@ print(defender.remainingFirePower) */
 var defender: ShieldedShip = .init()
 defender.wasHit()
 print(defender.shieldStrength, defender.health) */
-
-
 /*:
  Когда `shieldStrength` равно 0, всё, что делает `wasHit()`  — это уменьшает `health` на 5.  Но это ровно то, что реализует `wasHit()` в классе `Spaceship`!  Вместо того, чтобы перезаписать этот код, вы можете вызвать реализацию `wasHit()` суперкласса.  Вернитеь к вашей реализации `wasHit()` для класса `ShieldedShip` и замените код, уменьшающий `health` на 5 кодом, который вызывает реализацию этого метода для суперкласса.  Вызовите `wasHit()` для экземпляра `defender`, затем выведите значения `shieldStrength` и `health`.
  */
@@ -95,12 +91,12 @@ class ShieldedShip: Fighter {
     
 }
 
-let defender: ShieldedShip = .init()
+var defender: ShieldedShip = .init()
 defender.wasHit()
 print(defender.shieldStrength, defender.health)
 
-let defOne: ShieldedShip = .init()
-let defTwo = defOne
+var defOne: ShieldedShip = .init()
+var defTwo = defOne
 
 defender === defOne ? print("Yes!") : print("No!")
 defTwo === defOne ? print("Yes!") : print("No!")
