@@ -59,7 +59,7 @@ func logFood() -> Food? {
 let result = logFood()
 
 if let list = result {
-    print("You ate \(result!.name) with \(result!.calories) calories!")
+    print("You ate \(list.name) with \(list.calories) calories!")
 } else {
     print("You ate nothing!")
 }
